@@ -10,4 +10,11 @@ questions = ["It is certain", "It is decidedly so", "Without a doubt",
 def answer():
     return questions[random.randint(0,19)]
 
-print("What's your question?")
+
+run = True
+while run:
+    user_input = input("What's your question?")
+    if user_input.upper() == "QUIT":
+        run = False
+    elif not user_input.endswith('?'):
+        print("I’m sorry, I can only answer questions.")
